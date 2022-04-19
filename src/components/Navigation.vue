@@ -140,7 +140,6 @@ export default {
 <style lang="scss" scoped>
 header {
   // background-color: #fff;
-  background-image: url("http://www.miracolieucaristici.org/miracoli_images/splash_bkg_01.jpg");
   padding: 0 25px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
