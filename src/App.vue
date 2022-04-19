@@ -61,6 +61,7 @@ export default {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+   background:url("https://ibb.co/FmhVqbT");
 }
 .container {
   max-width: 1440px;
