@@ -2,23 +2,38 @@
   <header>
     <nav class="container">
       <div class="branding">
-        <router-link class="header" :to="{ name: 'Home' }">The Rosarians</router-link>
+        <router-link class="header" :to="{ name: 'Home' }"
+          >The Rosarians</router-link
+        >
       </div>
       <div class="nav-links">
         <ul v-show="!mobile">
           <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
           <router-link class="link" :to="{ name: 'Blogs' }">Prayer</router-link>
-          <router-link class="link" :to="{ name: 'About_ros' }">About</router-link>
-          <router-link v-if="user" class="link" :to="{ name: 'CreatePost' }">Create Prayer</router-link>
-          <router-link v-if="!user" class="link" :to="{ name: 'Login' }">Login/Register</router-link>
+          <!-- <router-link class="link" :to="{ name: 'About_ros' }">About</router-link> -->
+          <router-link v-if="user" class="link" :to="{ name: 'CreatePost' }"
+            >Create Prayer</router-link
+          >
+          <router-link v-if="!user" class="link" :to="{ name: 'Login' }"
+            >Login/Register</router-link
+          >
         </ul>
-        <div v-if="user" :class="{ 'mobile-user-menu': mobile }" @click="toggleProfileMenu" class="profile" ref="profile">
+        <div
+          v-if="user"
+          :class="{ 'mobile-user-menu': mobile }"
+          @click="toggleProfileMenu"
+          class="profile"
+          ref="profile"
+        >
           <span>{{ this.$store.state.profileInitials }}</span>
           <div v-show="profileMenu" class="profile-menu">
             <div class="info">
               <p class="initials">{{ this.$store.state.profileInitials }}</p>
               <div class="right">
-                <p>{{ this.$store.state.profileFirstName }} {{ this.$store.state.profileLastName }}</p>
+                <p>
+                  {{ this.$store.state.profileFirstName }}
+                  {{ this.$store.state.profileLastName }}
+                </p>
                 <p>{{ this.$store.state.profileUsername }}</p>
                 <p>{{ this.$store.state.profileEmail }}</p>
               </div>
@@ -50,9 +65,13 @@
       <ul class="mobile-nav" v-show="mobileNav">
         <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
         <router-link class="link" :to="{ name: 'Blogs' }">Prayers</router-link>
-        <router-link class="link" :to="{ name: 'About_ros' }">About</router-link>
-        <router-link v-if="user" class="link" :to="{ name: 'CreatePost' }">Create Prayer</router-link>
-        <router-link v-if="!user" class="link" :to="{ name: 'Login' }">Login/Register</router-link>
+        <!-- <router-link class="link" :to="{ name: 'About_ros' }">About</router-link> -->
+        <router-link v-if="user" class="link" :to="{ name: 'CreatePost' }"
+          >Create Prayer</router-link
+        >
+        <router-link v-if="!user" class="link" :to="{ name: 'Login' }"
+          >Login/Register</router-link
+        >
       </ul>
     </transition>
   </header>
@@ -120,9 +139,11 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  background-color: #fff;
+  // background-color: #fff;
+  background-image: url("http://www.miracolieucaristici.org/miracoli_images/splash_bkg_01.jpg");
   padding: 0 25px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   z-index: 99;
   .link {
     font-weight: 500;
@@ -180,7 +201,8 @@ header {
           right: 0;
           width: 250px;
           background-color: #303030;
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06);
           .info {
             display: flex;
             align-items: center;

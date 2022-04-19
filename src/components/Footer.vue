@@ -3,34 +3,42 @@
     <div class="container">
       <div class="left">
         <div class="col-1">
-          <router-link class="header" :to="{ name: 'Home' }">The Rosarians</router-link>
+          <router-link class="header" :to="{ name: 'Home' }"
+            >The Rosarians</router-link
+          >
           <ul>
             <li>
-              <a href="#"><youTube class="svg-icon"/></a>
+              <a href="#"><youTube class="svg-icon" /></a>
             </li>
             <li>
-              <a href="#"><twitter class="svg-icon"/></a>
+              <a href="#"><twitter class="svg-icon" /></a>
             </li>
             <li>
-              <a href="#"><instagram class="svg-icon"/></a>
+              <a href="#"><instagram class="svg-icon" /></a>
             </li>
             <li>
-              <a href="#"><linkedin class="svg-icon"/></a>
+              <a href="#"><linkedin class="svg-icon" /></a>
             </li>
           </ul>
         </div>
         <div class="col-2">
           <ul>
             <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
-            <router-link class="link" :to="{ name: 'Blogs' }">Prayers</router-link>
-            <router-link class="link" :to="{ name: 'About_ros' }">About</router-link>
-            <router-link v-if="user" class="link" :to="{ name: 'CreatePost' }">Create Prayer</router-link>
-            <router-link v-if="!user" class="link" :to="{ name: 'Login' }">Login In / Register</router-link>
+            <router-link class="link" :to="{ name: 'Blogs' }"
+              >Prayers</router-link
+            >
+            <!-- <router-link class="link" :to="{ name: 'About_ros' }">About</router-link> -->
+            <router-link v-if="user" class="link" :to="{ name: 'CreatePost' }"
+              >Create Prayer</router-link
+            >
+            <router-link v-if="!user" class="link" :to="{ name: 'Login' }"
+              >Login In / Register</router-link
+            >
           </ul>
         </div>
       </div>
       <div class="right">
-        <p>Copyright By Rosarians 2021</p>
+        <p>Copyright By Rosarians {{ currentYear }}</p>
         <p>Developed By Rufus Drew</p>
       </div>
     </div>
@@ -44,6 +52,11 @@ import instagram from "../assets/Icons/instagram-brands.svg";
 import linkedin from "../assets/Icons/linkedin-brands.svg";
 export default {
   name: "footer-vue",
+  data() {
+    return {
+      currentYear: new Date().getFullYear(), // 2020
+    };
+  },
   components: {
     youTube,
     twitter,
