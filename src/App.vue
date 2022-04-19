@@ -61,6 +61,7 @@ export default {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+   background:url("http://www.miracolieucaristici.org/miracoli_images/splash_bkg_01.jpg");
 }
 .container {
   max-width: 1440px;
